@@ -32,10 +32,11 @@ int main(int argc, char* argv[])
         }
         
         // read in from file and put character you read into output. 
-        for (int c = fgetc(file); c != EOF; c = fgetc(file))
+        for (char c = fgetc(file); c != EOF; c = fgetc(file))
         {
-            //Also can use putc(c,output);
+            //Also can use putc(c,output); or fprintf(output,"%c",c);
             fwrite(&c,sizeof(char),1,output);
+
         }
         
         fclose(file);
