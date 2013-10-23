@@ -19,7 +19,6 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-
     // open each file given on the command line, one by one
     for(int i = 1; i < argc; i++)
     {
@@ -35,7 +34,7 @@ int main(int argc, char* argv[])
         // read in from file and put character you read into output. 
         for (int c = fgetc(file); c != EOF; c = fgetc(file))
         {
-            //putc(c,output);
+            //Also can use putc(c,output);
             fwrite(&c,sizeof(char),1,output);
         }
         
